@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="calc">
+      <div>
+        <div class="header">
+          <h1>BMI Calculator</h1>
+          <select name="units" id="units">
+            <option value="imperial">Imperial</option>
+            <option value="meteric">Meteric</option>
+          </select>
+        </div>
+
+        <div class="main">
+          <div class="main__section">
+            <label for="weight">Weight</label>
+            <br />
+            <input id="weight" name="weight" />
+          </div>
+          <div class="main__section">
+            <label for="height">Height</label>
+            <br />
+            <input id="height" name="height" />
+          </div>
+        </div>
+
+        <button id="btn" type="submit">Calculate</button>
+      </div>
+    </div>
+  </body>
+</html>

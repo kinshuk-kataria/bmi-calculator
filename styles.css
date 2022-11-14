@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  background-image: url('./assets/background.jpg');
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.calc {
+  background-color: #000000bf;
+  height: 100vh;
+  width: 100%;
+  padding: 50px 25px;
+  font-size: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header > h1 {
+  font-weight: 300;
+}
+
+.header > select {
+  background-color: #00000066;
+  color: #ffffff;
+  font-size: 12px;
+  height: 25px;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+.main {
+  margin: 30px 0;
+}
+
+.main__section {
+  margin: 20px 0;
+}
+
+.main__section > input {
+  width: 100%;
+  padding: 16px 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 3px;
+}
+
+.main__section > label {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+#btn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #e50914;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 600px) {
+  .calc {
+    margin: 0;
+    width: 450px;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    /*box-shadow: ;*/
+  }
+}

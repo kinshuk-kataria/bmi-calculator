@@ -18,20 +18,25 @@
           </select>
         </div>
 
-        <div class="main">
-          <div class="main__section">
+        <form class="form">
+          <div class="form__section">
             <label for="weight">Weight</label>
             <br />
-            <input id="weight" name="weight" />
+            <input id="weight" name="weight" placeholder="lbs" required />
           </div>
-          <div class="main__section">
+          <div class="form__section">
             <label for="height">Height</label>
             <br />
-            <input id="height" name="height" />
-          </div>
-        </div>
 
-        <button id="btn" type="submit">Calculate</button>
+            <div id="height">
+              <input id="feets" name="height" placeholder="feets" required />
+              <input id="inches" name="height" placeholder="inches" required />
+            </div>
+          </div>
+          <button id="btn" type="submit">Calculate</button>
+        </form>
+
+        <script src="app.js" charset="utf-8"></script>
       </div>
     </div>
   </body>

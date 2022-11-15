@@ -42,17 +42,18 @@ body {
   height: 25px;
   cursor: pointer;
   font-weight: 300;
+  outline: none;
 }
 
-.main {
+.form {
   margin: 30px 0;
 }
 
-.main__section {
+.form__section {
   margin: 20px 0;
 }
 
-.main__section > input {
+.form__section > input {
   width: 100%;
   padding: 16px 10px;
   border: none;
@@ -62,9 +63,33 @@ body {
   margin-top: 3px;
 }
 
-.main__section > label {
+.form__section > label {
   font-weight: 600;
   font-size: 12px;
+}
+
+#height {
+  display: flex;
+}
+
+#feets {
+  margin-right: 3px;
+  flex: 1;
+  padding: 16px 10px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
+#inches {
+  flex: 1;
+  padding: 16px 10px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+}
+
+::placeholder {
+  text-align: end;
 }
 
 #btn {

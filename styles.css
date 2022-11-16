@@ -70,22 +70,23 @@ body {
 
 #height {
   display: flex;
+  justify-content: space-between;
 }
 
 #feets {
   margin-right: 3px;
-  flex: 1;
   padding: 16px 10px;
   border: none;
   outline: none;
   border-radius: 4px;
+  width: 100%;
 }
 #inches {
-  flex: 1;
   padding: 16px 10px;
   outline: none;
   border: none;
   border-radius: 4px;
+  width: 100%;
 }
 
 #btn {
@@ -98,6 +99,21 @@ body {
   background-color: #e50914;
   font-weight: 300;
   font-size: 18px;
+}
+
+.result {
+  padding-top: 20px;
+}
+
+#reset {
+  margin-top: 10px;
+  padding: 8px 10px;
+  background-color: #a4833d;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 600px) {

@@ -22,20 +22,34 @@
           <div class="form__section">
             <label for="weight">Weight</label>
             <br />
-            <input id="weight" name="weight" placeholder="lbs" required />
+            <input type="number" id="weight" name="weight" placeholder="lbs" />
           </div>
           <div class="form__section">
             <label for="height">Height</label>
             <br />
 
             <div id="height">
-              <input id="feets" name="height" placeholder="feets" required />
-              <input id="inches" name="height" placeholder="inches" required />
+              <input
+                type="number"
+                id="feets"
+                name="height"
+                placeholder="feets"
+              />
+              <input
+                type="number"
+                id="inches"
+                name="height"
+                placeholder="inches"
+              />
             </div>
           </div>
         </form>
         <button id="btn">Calculate</button>
-        <div></div>
+        <div class="result">
+          <div><p id="bmi"></p> <p id="status"></p></div>
+
+          <button id="reset">reset</button>
+        </div>
       </div>
     </div>
     <script src="app.js" charset="utf-8"></script>

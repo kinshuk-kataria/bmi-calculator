@@ -2,8 +2,9 @@ let heightNode = document.getElementById('height');
 let heightNodeChild = document.getElementById('inches');
 let weightNode = document.getElementById('weight');
 let calcSystem = 'imperial';
-
-const dropDownList = document.getElementById('units');
+let dropDownList = document.getElementById('units');
+let bmi = document.getElementById('bmi');
+let healthStatus = document.getElementById('status');
 
 dropDownList.onchange = () => {
   if (dropDownList.value === 'meteric') {
@@ -26,7 +27,6 @@ function calculateMeterics() {
     (inputWeight / inputHeight / inputHeight) * 10000
   ).toFixed(1);
 
-  console.log('In meteruics');
   let evaluation;
 
   if (finalEquation < 18.5) {
@@ -42,7 +42,12 @@ function calculateMeterics() {
     evaluation = 'obese';
   }
 
-  console.log(finalEquation);
+  if (inputWeight <= 0 || inputHeight <= 0) {
+    bmi.innerHTML = 'Please enter valid inputs! ';
+  } else {
+    bmi.innerHTML = `Your BMI is ${finalEquation}`;
+    healthStatus.innerHTML = `Your health status is ${evaluation}`;
+  }
 }
 
 function calculateImperial() {
@@ -53,7 +58,7 @@ function calculateImperial() {
   let metersSquared = +totalInches * +totalInches;
   let conversionWeight = (inputWeight *= 0.453592);
   let finalEquation = (+conversionWeight / +metersSquared).toFixed(1);
-  console.log('in imerial');
+
   let evaluation;
 
   if (finalEquation < 18.5) {
@@ -68,10 +73,30 @@ function calculateImperial() {
   if (finalEquation >= 30) {
     evaluation = 'obese';
   }
-  console.log(finalEquation);
+
+  if (inputWeight <= 0 || inputFeet <= 0 || inputInches <= 0) {
+    bmi.innerHTML = 'Please enter valid inputs! ';
+  } else {
+    bmi.innerHTML = `Your BMI is ${finalEquation}`;
+    healthStatus.innerHTML = `Your health status is ${evaluation}`;
+  }
 }
 
 const button = document.getElementById('btn');
 button.addEventListener('click', () =>
   calcSystem === 'imperial' ? calculateImperial() : calculateMeterics()
 );
+
+const reset = document.getElementById('reset');
+
+reset.addEventListener('click', () => clear());
+
+function clear() {
+  document.getElementById('feets').value = '';
+  document.getElementById('weight').value = '';
+  bmi.innerHTML = '';
+  healthStatus.innerHTML = '';
+  calcSystem === 'imperial'
+    ? (document.getElementById('inches').value = '')
+    : '';
+}
